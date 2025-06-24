@@ -25,16 +25,35 @@ class RegisterPage extends StatelessWidget {
         onTap: () => FocusScope.of(context).unfocus(),
         child: Center(
           child: SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(horizontal: 34.0),
+            padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 30),
             child: Form(
               key: formKey,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
+                  const Text(
+                    'Create Account',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black87,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  const Text(
+                    'Please fill in the form to continue',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.grey,
+                    ),
+                  ),
+                  const SizedBox(height: 30),
                   Center(
                     child: Image.network(
-                      'https://cdn-icons-png.flaticon.com/512/5087/5087579.png',
+                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbur8qvYRUq4sMsnSRoFndG5TLIG9asxqGvA&s',
                       height: 150,
                       width: 150,
                     ),
@@ -118,6 +137,21 @@ class RegisterPage extends StatelessWidget {
                     child: const Text('Register', style: TextStyle(fontSize: 18)),
                   ),
                   const SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text("Already have an account?"),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        child: const Text(
+                          "Login",
+                          style: TextStyle(color: Colors.blue),
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),

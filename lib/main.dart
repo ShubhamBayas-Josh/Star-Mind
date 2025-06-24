@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:star_mind/Screens/Auth/login_screen.dart';
+import 'package:star_mind/Screens/home_page.dart';
 
 import 'Screens/Auth/register_screen.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const RegisterPage(),
+      home: const LoginPage(),
     );
   }
 }
